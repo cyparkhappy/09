@@ -5,25 +5,18 @@
 int main (void)
 {
     int i;
-    int grade[SIZE];
-    int score[SIZE];
-
-
-    printf("5명의 점수를 입력하세요. \n");
-
+    int a[SIZE] = {1, 2, 3, 4, 5};
+    int b[SIZE] = {1, 2, 3, 6, 7};
+    int flag_same = 1;
 
     for (i=0; i<SIZE; i++)
-        grade[i] = rand()%100;
+    {
+        if (a[i]!=b[i])
+        {
+            printf("배열은 인덱스 %d에서 다른 값을 가집니다.\n", i);
+        }
+    }
 
-
-    for (i=0; i<SIZE; i++)
-        score[i] = grade[i];   
-
-
-    for (i=0; i<SIZE; i++)
-        printf("score[%d] = %d\n", i, score[i]);
-    
 
     return 0;
-    
 }
